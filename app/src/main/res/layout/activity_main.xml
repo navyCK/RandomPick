@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Txt_Print"
+            android:textColor="#F44336"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp">
+
+        <Button
+            android:id="@+id/btn_pick"
+            android:text="@string/Btn_Pick"
+            android:layout_width="300dp"
+            android:layout_height="75dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_margin="10dp"
+        android:text="@string/Btn_Add"
+        android:layout_width="300dp"
+        android:layout_height="50dp"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/layout_input"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input1"
+                    android:hint="@string/Txt_Input"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:autofillHints=""
+                    android:inputType="text" />
+
+                <Button
+                    android:layout_marginStart="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input2"
+                    android:hint="@string/Txt_Input"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:autofillHints=""
+                    android:inputType="text" />
+
+                <Button
+                    android:layout_marginStart="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/edit_input3"
+                        android:hint="@string/Txt_Input"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:autofillHints=""
+                        android:inputType="text" />
+
+                    <Button
+                        android:layout_marginStart="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/edit_input4"
+                        android:hint="@string/Txt_Input"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:autofillHints=""
+                        android:inputType="text" />
+
+                    <Button
+                        android:layout_marginStart="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/edit_input5"
+                        android:hint="@string/Txt_Input"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:autofillHints=""
+                        android:inputType="text" />
+
+                    <Button
+                        android:layout_marginStart="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>
