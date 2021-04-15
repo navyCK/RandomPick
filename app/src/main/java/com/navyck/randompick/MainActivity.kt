@@ -50,19 +50,21 @@ class MainActivity : AppCompatActivity() {
 
             val random = Random()
             var candidateNumber = 0
-            for (i in 0..layoutNumber + 1) {
-                Log.d("${i+1}후보 : ", candidates[i])
-                if (candidates[i] != "") {
-                    candidateNumber += 1
-                }
-            }
 
-            val num = random.nextInt(candidateNumber)
-
-            text_result.text = candidates[num]
-            if (candidates[num] == "") {
+            if (candidates[0] == "" || candidates[1] == "") {
                 text_result.text = "후보를 입력해주세요!"
+            } else {
+                for (i in 0..layoutNumber + 1) {
+                    Log.d("${i+1}후보 : ", candidates[i])
+                    if (candidates[i] != "") {
+                        candidateNumber += 1
+                    }
+                }
+                val num = random.nextInt(candidateNumber)
+
+                text_result.text = candidates[num]
             }
+
             val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
             text_result.startAnimation(animationFadeIn)
         }
