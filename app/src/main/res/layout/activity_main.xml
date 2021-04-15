@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
 <LinearLayout
+    android:id="@+id/linearLayout"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_width="match_parent"
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/Txt_Print"
-            android:textColor="#F44336"
+            android:textColor="@color/black"
             android:textSize="30sp" />
 
     </LinearLayout>
@@ -46,8 +47,13 @@
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_margin="10dp"
         android:text="@string/Btn_Add"
+        android:layout_width="300dp"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:text="@string/Btn_Delete"
         android:layout_width="300dp"
         android:layout_height="50dp"/>
 
@@ -60,7 +66,6 @@
 
 
             <LinearLayout
-                android:id="@+id/layout_input"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -68,15 +73,10 @@
                 <EditText
                     android:id="@+id/edit_input1"
                     android:hint="@string/Txt_Input"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:autofillHints=""
                     android:inputType="text" />
-
-                <Button
-                    android:layout_marginStart="5dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
 
             </LinearLayout>
 
@@ -88,15 +88,10 @@
                 <EditText
                     android:id="@+id/edit_input2"
                     android:hint="@string/Txt_Input"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:autofillHints=""
                     android:inputType="text" />
-
-                <Button
-                    android:layout_marginStart="5dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
 
             </LinearLayout>
 
@@ -107,6 +102,8 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_input3"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,18 +112,16 @@
                     <EditText
                         android:id="@+id/edit_input3"
                         android:hint="@string/Txt_Input"
-                        android:layout_width="250dp"
+                        android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:autofillHints=""
                         android:inputType="text" />
 
-                    <Button
-                        android:layout_marginStart="5dp"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"/>
-
                 </LinearLayout>
+
                 <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_input4"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -135,18 +130,16 @@
                     <EditText
                         android:id="@+id/edit_input4"
                         android:hint="@string/Txt_Input"
-                        android:layout_width="250dp"
+                        android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:autofillHints=""
                         android:inputType="text" />
 
-                    <Button
-                        android:layout_marginStart="5dp"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"/>
 
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_input5"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,15 +148,11 @@
                     <EditText
                         android:id="@+id/edit_input5"
                         android:hint="@string/Txt_Input"
-                        android:layout_width="250dp"
+                        android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:autofillHints=""
                         android:inputType="text" />
 
-                    <Button
-                        android:layout_marginStart="5dp"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"/>
 
                 </LinearLayout>
 

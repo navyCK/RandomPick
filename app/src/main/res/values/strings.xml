@@ -4,4 +4,5 @@
     <string name="Btn_Add">추가</string>
     <string name="Txt_Input">후보를 입력해주세요.</string>
     <string name="Txt_Print">후보 입력 후 뽑기 \n버튼을 눌러주세요!</string>
+    <string name="Btn_Delete">삭제</string>
 </resources>
