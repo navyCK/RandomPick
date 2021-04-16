@@ -11,6 +11,8 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Random
 
+
+
 class MainActivity : AppCompatActivity() {
     @SuppressLint("ShowToast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,23 +32,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_delete.setOnClickListener() {
+            val candidate3 = edit_input3.text
+            val candidate4 = edit_input4.text
+            val candidate5 = edit_input5.text
+            val candidates = arrayOf(candidate3, candidate4, candidate5)
+
             if (layoutNumber == 0) {
                 Snackbar.make(linearLayout, "더이상 삭제할 수 없습니다.", Snackbar.LENGTH_SHORT).show()
             } else {
                 layouts[layoutNumber - 1].visibility = View.GONE
                 layoutNumber -= 1
+                candidates[layoutNumber].clear()
             }
         }
 
 
 
         btn_pick.setOnClickListener() {
-            val candidate1 = edit_input1.text.toString()
-            val candidate2 = edit_input2.text.toString()
-            val candidate3 = edit_input3.text.toString()
-            val candidate4 = edit_input4.text.toString()
-            val candidate5 = edit_input5.text.toString()
-            val candidates : Array<String> = arrayOf(candidate1, candidate2, candidate3, candidate4, candidate5)
+            val candidates: Array<String> = editCandidate()
 
             val random = Random()
             var candidateNumber = 0
@@ -74,4 +77,14 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    private fun editCandidate(): Array<String> {
+        val candidate1 = edit_input1.text.toString()
+        val candidate2 = edit_input2.text.toString()
+        val candidate3 = edit_input3.text.toString()
+        val candidate4 = edit_input4.text.toString()
+        val candidate5 = edit_input5.text.toString()
+        return arrayOf(candidate1, candidate2, candidate3, candidate4, candidate5)
+    }
 }
+
