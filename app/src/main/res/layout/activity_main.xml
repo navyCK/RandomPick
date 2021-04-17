@@ -34,13 +34,13 @@
     <LinearLayout
         android:layout_margin="10dp"
         android:layout_width="300dp"
-        android:layout_height="75dp">
+        android:layout_height="50dp">
 
         <Button
             android:id="@+id/btn_pick"
             android:text="@string/Btn_Pick"
             android:layout_width="300dp"
-            android:layout_height="75dp"/>
+            android:layout_height="50dp"/>
 
 
     </LinearLayout>
