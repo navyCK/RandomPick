@@ -20,11 +20,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var layoutNumber = 0
-        val layouts : Array<LinearLayout> = arrayOf(layout_input3, layout_input4, layout_input5)
+        val layouts : Array<LinearLayout> = arrayOf(layout_input3, layout_input4, layout_input5, layout_input6,
+                                                    layout_input7, layout_input8, layout_input9, layout_input10)
 
         btn_add.setOnClickListener() {
             if (layoutNumber == layouts.size) {
-                Snackbar.make(linearLayout, "더이상 추가할 수 없습니다.", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(linearLayout, "최대 10개까지 추가 가능합니다.", Snackbar.LENGTH_SHORT).show()
             } else {
                 layouts[layoutNumber].visibility = View.VISIBLE
                 layoutNumber += 1
@@ -35,10 +36,16 @@ class MainActivity : AppCompatActivity() {
             val candidate3 = edit_input3.text
             val candidate4 = edit_input4.text
             val candidate5 = edit_input5.text
-            val candidates = arrayOf(candidate3, candidate4, candidate5)
+            val candidate6 = edit_input6.text
+            val candidate7 = edit_input7.text
+            val candidate8 = edit_input8.text
+            val candidate9 = edit_input9.text
+            val candidate10 = edit_input10.text
+            val candidates = arrayOf(candidate3, candidate4, candidate5, candidate6,
+                                                        candidate7, candidate8,candidate9, candidate10)
 
             if (layoutNumber == 0) {
-                Snackbar.make(linearLayout, "더이상 삭제할 수 없습니다.", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(linearLayout, "최소 2개부터 뽑기 가능합니다.", Snackbar.LENGTH_SHORT).show()
             } else {
                 layouts[layoutNumber - 1].visibility = View.GONE
                 layoutNumber -= 1
@@ -84,7 +91,13 @@ class MainActivity : AppCompatActivity() {
         val candidate3 = edit_input3.text.toString()
         val candidate4 = edit_input4.text.toString()
         val candidate5 = edit_input5.text.toString()
-        return arrayOf(candidate1, candidate2, candidate3, candidate4, candidate5)
+        val candidate6 = edit_input6.text.toString()
+        val candidate7 = edit_input7.text.toString()
+        val candidate8 = edit_input8.text.toString()
+        val candidate9 = edit_input9.text.toString()
+        val candidate10 = edit_input10.text.toString()
+        return arrayOf(candidate1, candidate2, candidate3, candidate4, candidate5,
+                    candidate6, candidate7, candidate8, candidate9, candidate10)
     }
 }
 
