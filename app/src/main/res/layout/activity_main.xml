@@ -35,7 +35,7 @@
         android:orientation="vertical"
         android:layout_margin="10dp"
         android:layout_width="300dp"
-        android:layout_height="50dp">
+        android:layout_height="100dp">
 
         <Button
             android:id="@+id/btn_pick"
@@ -44,7 +44,6 @@
             android:layout_height="50dp"/>
 
         <Button
-            android:visibility="gone"
             android:id="@+id/btn_one_pick"
             android:text="@string/Btn_One_Pick"
             android:layout_width="300dp"
