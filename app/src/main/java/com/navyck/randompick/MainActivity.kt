@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
 
         btn_pick.setOnClickListener() {
             val candidates: Array<String> = editCandidate()
-
             val random = Random()
             var candidateNumber = 0
 
@@ -75,16 +74,30 @@ class MainActivity : AppCompatActivity() {
                 val num = random.nextInt(candidateNumber)
                 text_result.text = candidates[num]
             }
-
             val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
             text_result.startAnimation(animationFadeIn)
         }
 
-//        btn_one_pick.setOnClickListener() {
-//
-//        }
+        // TODO 중복 없이 뽑기 구현하기
+        btn_one_pick.setOnClickListener() {
+            val candidates: Array<String> = editCandidate()
+            var candidateNumber = 0
 
+            if (candidates[0] == "" || candidates[1] == "") {
+                text_result.text = "후보를 입력해주세요!"
+            } else {
+                for (i in 0..layoutNumber + 1) {
+                    Log.d("${i+1}후보 : ", candidates[i])
+                    if (candidates[i] != "") {
+                        candidateNumber += 1
+                    }
+                }
+                text_result.text = candidates.toList().toString()
 
+            }
+            val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+            text_result.startAnimation(animationFadeIn)
+        }
 
 
 
