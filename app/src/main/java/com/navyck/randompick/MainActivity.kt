@@ -1,14 +1,15 @@
 package com.navyck.randompick
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
-import android.widget.Toast
+import androidx.annotation.Dimension
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Random
@@ -16,7 +17,7 @@ import java.util.Random
 
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("ShowToast")
+    @SuppressLint("ShowToast", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_pick.setOnClickListener() {
+            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30F)
             val candidates: Array<String> = editCandidate()
             val random = Random()
             var candidateNumber = 0
@@ -78,8 +80,10 @@ class MainActivity : AppCompatActivity() {
             text_result.startAnimation(animationFadeIn)
         }
 
+
         // TODO 중복 없이 뽑기 구현하기
         btn_one_pick.setOnClickListener() {
+            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F)
             val candidates: Array<String> = editCandidate()
             var candidateNumber = 0
 
@@ -92,9 +96,28 @@ class MainActivity : AppCompatActivity() {
                         candidateNumber += 1
                     }
                 }
-                text_result.text = candidates.toList().toString()
 
+
+                var temp = ""
+                var temp2 = ""
+                var randomNum1 = 0
+                var randomNum2 = 0
+
+                for (i in 0..layoutNumber + 1) {
+                    randomNum1 = (Math.random()*candidateNumber).toInt()
+                    temp = candidates[randomNum1]
+                    randomNum2 = (Math.random()*candidateNumber).toInt()
+                    temp2 = candidates[randomNum2]
+                    candidates[randomNum1] = temp2
+                    candidates[randomNum2] = temp
+                }
+
+                text_result.text = "[1등] : ${candidates[0]}"  + "\t\t\t\t[2등] : ${candidates[1]}"
+                for (i in 2..layoutNumber + 1) {
+                    text_result.text = text_result.text.toString() + "\t\t\t\t[${i+1}등] : ${candidates[i]}"
+                }
             }
+
             val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
             text_result.startAnimation(animationFadeIn)
         }
