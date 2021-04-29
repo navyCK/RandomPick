@@ -14,22 +14,31 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="300dp"
-        android:layout_height="100dp">
-
-        <TextView
-            android:id="@+id/text_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:gravity="center"
-            android:text="@string/Txt_Print"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:layout_width="300dp"
+            android:layout_height="150dp">
 
-    </LinearLayout>
+            <HorizontalScrollView
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                tools:ignore="NestedScrolling,UselessParent">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/text_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Txt_Print"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
