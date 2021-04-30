@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_pick.setOnClickListener() {
-            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30F)
+            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 35F)
             val candidates: Array<String> = editCandidate()
             val random = Random()
             var candidateNumber = 0
@@ -80,8 +80,6 @@ class MainActivity : AppCompatActivity() {
             text_result.startAnimation(animationFadeIn)
         }
 
-
-        // TODO 중복 없이 뽑기 구현하기
         btn_one_pick.setOnClickListener() {
             text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F)
             val candidates: Array<String> = editCandidate()
@@ -98,10 +96,10 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-                var temp = ""
-                var temp2 = ""
-                var randomNum1 = 0
-                var randomNum2 = 0
+                var temp: String = ""
+                var temp2: String = ""
+                var randomNum1: Int = 0
+                var randomNum2: Int = 0
 
                 for (i in 0..layoutNumber + 1) {
                     randomNum1 = (Math.random()*candidateNumber).toInt()
