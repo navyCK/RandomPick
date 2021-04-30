@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Random\nPick</string>
-    <string name="Btn_Pick">PICK</string>
+    <string name="Btn_Pick">RANDOM PICK</string>
     <string name="Btn_Add">ADD</string>
     <string name="Txt_Input">후보를 입력해주세요.</string>
     <string name="Txt_Print">INPUT → PICK !</string>
     <string name="Btn_Delete">DELETE</string>
-    <string name="Btn_One_Pick">중복 없이 뽑기</string>
+    <string name="Btn_One_Pick">RANDOM RANK</string>
+    <string name="app_icon">app_icon</string>
 </resources>

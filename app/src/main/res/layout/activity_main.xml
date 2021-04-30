@@ -14,31 +14,41 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:background="@drawable/random2_negative"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_icon" />
+
+    <HorizontalScrollView
+        android:fadeScrollbars="false"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="NestedScrolling,UselessParent">
+
         <LinearLayout
+            android:layout_margin="5dp"
             android:gravity="center"
             android:layout_width="300dp"
-            android:layout_height="150dp">
+            android:layout_height="100dp">
 
-            <HorizontalScrollView
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:layout_width="300dp"
-                android:layout_height="150dp"
-                tools:ignore="NestedScrolling,UselessParent">
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/text_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Txt_Print"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
 
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/text_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/Txt_Print"
-                    android:textColor="@color/white"
-                    android:textSize="30sp" />
-
-            </HorizontalScrollView>
 
         </LinearLayout>
+
+    </HorizontalScrollView>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -47,6 +57,7 @@
         android:layout_height="100dp">
 
         <Button
+            android:drawableStart="@drawable/ic_left_random"
             android:id="@+id/btn_pick"
             android:text="@string/Btn_Pick"
             android:layout_width="300dp"
