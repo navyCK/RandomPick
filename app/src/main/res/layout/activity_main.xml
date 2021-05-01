@@ -64,6 +64,7 @@
             android:layout_height="50dp"/>
 
         <Button
+            android:drawableStart="@drawable/ic_left_rank"
             android:id="@+id/btn_one_pick"
             android:text="@string/Btn_One_Pick"
             android:layout_width="300dp"
@@ -73,12 +74,14 @@
     </LinearLayout>
 
     <Button
+        android:drawableStart="@drawable/ic_left_add"
         android:id="@+id/btn_add"
         android:text="@string/Btn_Add"
         android:layout_width="300dp"
         android:layout_height="50dp"/>
 
     <Button
+        android:drawableStart="@drawable/ic_left_remove"
         android:id="@+id/btn_delete"
         android:text="@string/Btn_Delete"
         android:layout_width="300dp"
