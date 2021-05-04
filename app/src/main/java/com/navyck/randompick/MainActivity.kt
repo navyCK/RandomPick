@@ -96,10 +96,10 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-                var temp: String = ""
-                var temp2: String = ""
-                var randomNum1: Int = 0
-                var randomNum2: Int = 0
+                var temp: String
+                var temp2: String
+                var randomNum1: Int
+                var randomNum2: Int
 
                 for (i in 0..layoutNumber + 1) {
                     randomNum1 = (Math.random()*candidateNumber).toInt()
