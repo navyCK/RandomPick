@@ -14,8 +14,25 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:background="@drawable/keyboard_negative"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_icon" />
+
+    </LinearLayout>
+
+
+
     <ImageView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/random2_negative"
         android:layout_width="50dp"
         android:layout_height="50dp"
