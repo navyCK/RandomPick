@@ -22,20 +22,45 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var language = true
         var layoutNumber = 0
         val layouts : Array<LinearLayout> = arrayOf(layout_input3, layout_input4, layout_input5, layout_input6,
                                                     layout_input7, layout_input8, layout_input9, layout_input10)
 
-        btn_add.setOnClickListener() {
+        language_setting.setOnClickListener {
+            if (language) {
+                text_result.text = "input -> pick"
+                btn_pick.text = "pick"
+                btn_one_pick.text = "one pick"
+                btn_add.text = "add"
+                btn_delete.text = "delete"
+                language = false
+            } else {
+                text_result.text = "후보 입력 후 뽑기!"
+                btn_pick.text = "무작위로 뽑기"
+                btn_one_pick.text = "중복없이 뽑기"
+                btn_add.text = "추가"
+                btn_delete.text = "삭제"
+                language = true
+            }
+        }
+
+        btn_add.setOnClickListener {
             if (layoutNumber == layouts.size) {
-                Snackbar.make(linearLayout, "최대 10개까지 추가 가능합니다.", Snackbar.LENGTH_SHORT).show()
+                var info = ""
+                info = if (language) {
+                    "최대 10개까지 추가 가능합니다."
+                } else {
+                    "max : 10"
+                }
+                Snackbar.make(linearLayout, info, Snackbar.LENGTH_SHORT).show()
             } else {
                 layouts[layoutNumber].visibility = View.VISIBLE
                 layoutNumber += 1
             }
         }
 
-        btn_delete.setOnClickListener() {
+        btn_delete.setOnClickListener {
             val candidate3 = edit_input3.text
             val candidate4 = edit_input4.text
             val candidate5 = edit_input5.text
@@ -48,7 +73,13 @@ class MainActivity : AppCompatActivity() {
                                                         candidate7, candidate8,candidate9, candidate10)
 
             if (layoutNumber == 0) {
-                Snackbar.make(linearLayout, "최소 2개부터 뽑기 가능합니다.", Snackbar.LENGTH_SHORT).show()
+                var info = ""
+                info = if (language) {
+                    "최대 10개까지 추가 가능합니다."
+                } else {
+                    "min : 2"
+                }
+                Snackbar.make(linearLayout, info, Snackbar.LENGTH_SHORT).show()
             } else {
                 layouts[layoutNumber - 1].visibility = View.GONE
                 layoutNumber -= 1
@@ -58,14 +89,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        btn_pick.setOnClickListener() {
+        btn_pick.setOnClickListener {
             text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 35F)
             val candidates: Array<String> = editCandidate()
             val random = Random()
             var candidateNumber = 0
 
             if (candidates[0] == "" || candidates[1] == "") {
-                text_result.text = "후보를 입력해주세요!"
+                var info = ""
+                info = if (language) {
+                    "후보를 입력해주세요!"
+                } else {
+                    "please input!"
+                }
+                text_result.text = info
             } else {
                 for (i in 0..layoutNumber + 1) {
                     Log.d("${i+1}후보 : ", candidates[i])
@@ -80,13 +117,19 @@ class MainActivity : AppCompatActivity() {
             text_result.startAnimation(animationFadeIn)
         }
 
-        btn_one_pick.setOnClickListener() {
+        btn_one_pick.setOnClickListener {
             text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F)
             val candidates: Array<String> = editCandidate()
             var candidateNumber = 0
 
             if (candidates[0] == "" || candidates[1] == "") {
-                text_result.text = "후보를 입력해주세요!"
+                var info = ""
+                info = if (language) {
+                    "후보를 입력해주세요!"
+                } else {
+                    "please input!"
+                }
+                text_result.text = info
             } else {
                 for (i in 0..layoutNumber + 1) {
                     Log.d("${i+1}후보 : ", candidates[i])
