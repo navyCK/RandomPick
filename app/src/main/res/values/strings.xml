@@ -7,4 +7,5 @@
     <string name="Btn_Delete">삭제</string>
     <string name="Btn_One_Pick">중복없이 뽑기</string>
     <string name="app_icon">app_icon</string>
+    <string name="language_setting">language_setting</string>
 </resources>

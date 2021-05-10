@@ -22,10 +22,11 @@
         tools:ignore="RtlHardcoded">
 
         <ImageView
+            android:id="@+id/language_setting"
             android:background="@drawable/keyboard_negative"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="@string/app_icon" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/language_setting" />
 
     </LinearLayout>
 
