@@ -61,7 +61,7 @@
                 android:gravity="center"
                 android:text="@string/Txt_Print"
                 android:textColor="@color/white"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
 
         </LinearLayout>
@@ -127,7 +127,7 @@
                     android:id="@+id/edit_input1"
                     android:hint="@string/Txt_Input"
                     android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:autofillHints=""
                     android:inputType="text" />
 
@@ -140,9 +140,9 @@
 
                 <EditText
                     android:id="@+id/edit_input2"
-                    android:hint="@string/Txt_Input"
+                    android:hint="@string/please_enter_a_candidate"
                     android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:autofillHints=""
                     android:inputType="text" />
 
@@ -165,7 +165,7 @@
                         android:id="@+id/edit_input3"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -180,7 +180,7 @@
                         android:id="@+id/edit_input4"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -195,7 +195,7 @@
                         android:id="@+id/edit_input5"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -210,7 +210,7 @@
                         android:id="@+id/edit_input6"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -225,7 +225,7 @@
                         android:id="@+id/edit_input7"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -240,7 +240,7 @@
                         android:id="@+id/edit_input8"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -255,7 +255,7 @@
                         android:id="@+id/edit_input9"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>
@@ -270,7 +270,7 @@
                         android:id="@+id/edit_input10"
                         android:hint="@string/Txt_Input"
                         android:layout_width="300dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:autofillHints=""
                         android:inputType="text" />
                 </LinearLayout>

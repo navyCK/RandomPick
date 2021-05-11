@@ -8,4 +8,5 @@
     <string name="Btn_One_Pick">중복없이 뽑기</string>
     <string name="app_icon">app_icon</string>
     <string name="language_setting">language_setting</string>
+    <string name="please_enter_a_candidate">Please enter a candidate!</string>
 </resources>

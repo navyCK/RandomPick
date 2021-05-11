@@ -29,12 +29,13 @@ class MainActivity : AppCompatActivity() {
 
         language_setting.setOnClickListener {
             if (language) {
-                text_result.text = "input -> pick"
-                btn_pick.text = "pick"
-                btn_one_pick.text = "one pick"
+                text_result.text = "Draw after entering candidates!"
+                btn_pick.text = "Random draw"
+                btn_one_pick.text = "Draw without duplicates"
                 btn_add.text = "add"
                 btn_delete.text = "delete"
                 language = false
+                text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F)
             } else {
                 text_result.text = "후보 입력 후 뽑기!"
                 btn_pick.text = "무작위로 뽑기"
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 btn_add.text = "추가"
                 btn_delete.text = "삭제"
                 language = true
+                text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30F)
             }
         }
 
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 info = if (language) {
                     "최대 10개까지 추가 가능합니다."
                 } else {
-                    "max : 10"
+                    "You can add up to 10."
                 }
                 Snackbar.make(linearLayout, info, Snackbar.LENGTH_SHORT).show()
             } else {
@@ -75,9 +77,9 @@ class MainActivity : AppCompatActivity() {
             if (layoutNumber == 0) {
                 var info = ""
                 info = if (language) {
-                    "최대 10개까지 추가 가능합니다."
+                    "최소 2개까지 삭제 가능합니다."
                 } else {
-                    "min : 2"
+                    "You can remove up to at least 2."
                 }
                 Snackbar.make(linearLayout, info, Snackbar.LENGTH_SHORT).show()
             } else {
@@ -90,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_pick.setOnClickListener {
-            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 35F)
+            text_result.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25F)
             val candidates: Array<String> = editCandidate()
             val random = Random()
             var candidateNumber = 0
@@ -100,12 +102,11 @@ class MainActivity : AppCompatActivity() {
                 info = if (language) {
                     "후보를 입력해주세요!"
                 } else {
-                    "please input!"
+                    "Please enter a candidate!"
                 }
                 text_result.text = info
             } else {
                 for (i in 0..layoutNumber + 1) {
-                    Log.d("${i+1}후보 : ", candidates[i])
                     if (candidates[i] != "") {
                         candidateNumber += 1
                     }
@@ -127,17 +128,15 @@ class MainActivity : AppCompatActivity() {
                 info = if (language) {
                     "후보를 입력해주세요!"
                 } else {
-                    "please input!"
+                    "Please enter a candidate!"
                 }
                 text_result.text = info
             } else {
                 for (i in 0..layoutNumber + 1) {
-                    Log.d("${i+1}후보 : ", candidates[i])
                     if (candidates[i] != "") {
                         candidateNumber += 1
                     }
                 }
-
 
                 var temp: String
                 var temp2: String
